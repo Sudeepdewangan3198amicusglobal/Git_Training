@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Attribute | Attribute Management System</title>
+
+    <meta name="description" content="Edit an existing business attribute in the Attribute Management System.">
+
+    <meta name="theme-color" content="#0d6efd">
+
+    <meta property="og:title" content="Edit Attribute">
+
+    <meta property="og:description" content="Update and manage business attributes.">
+
+    <meta property="og:type" content="website">
+
+    <link rel="canonical" href="https://example.com/attribute-app/edit-attribute.html">
+
+    <link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
+
+    <link rel="icon" href="assets/favicon/icon.svg" type="image/svg+xml">
+
+    <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+    <a href="#main-content" class="skip-link">
+
+        Skip to main content
+
+    </a>
+
+    <header class="site-header" role="banner">
+
+        <div class="container header-container">
+
+            <div>
+
+                <h1 class="site-title">
+
+                    Attribute Management System
+
+                </h1>
+
+                <p class="site-tagline">
+
+                    Edit and maintain existing business attributes.
+
+                </p>
+
+            </div>
+
+            <nav class="primary-nav" aria-label="Primary Navigation">
+
+                <ul class="nav-list">
+
+                    <li>
+
+                        <a href="index.html">
+
+                            Attributes
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="add-attribute.html">
+
+                            Add Attribute
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="edit-attribute.html" aria-current="page">
+
+                            Edit Attribute
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <button id="theme-toggle" class="btn btn--ghost btn--icon" type="button" aria-label="Toggle dark mode">
+
+                🌙
+
+            </button>
+
+        </div>
+
+    </header>
+
+    <main id="main-content" class="main-content">
+
+        <div class="container">
+
+            <div id="loading-banner" class="loading-banner" hidden>
+
+                <div class="loader"></div>
+
+                <p>
+
+                    Loading attribute...
+
+                </p>
+
+            </div>
+
+            <div id="error-banner" class="error-banner" role="alert" hidden>
+
+                <p>
+
+                    Failed to load attribute data.
+
+                </p>
+
+                <button id="retry-button" class="btn btn--primary" type="button">
+
+                    Retry
+
+                </button>
+
+            </div>
+
+            <section class="form-page" aria-labelledby="form-title">
+
+                <div class="card form-card">
+
+                    <h2 id="form-title" class="page-title">
+
+                        Edit Attribute
+
+                    </h2>
+
+                    <p class="page-description">
+
+                        Update the selected business attribute.
+
+                    </p>
+
+                    <div id="form-error-summary" role="alert" aria-live="assertive" tabindex="-1" hidden>
+
+                    </div>
+
+                    <form id="attribute-form" method="post" action="#" novalidate aria-labelledby="form-title">
+
+                        <input type="hidden" id="id" name="id" value="101">
+
+                        <fieldset>
+
+                            <legend>
+
+                                Attribute Details
+
+                            </legend>
+
+                            <div class="form-field">
+
+                                <label for="attributeName">
+
+                                    Attribute Name
+
+                                </label>
+
+                                <input type="text" id="attributeName" name="attributeName" value="Employee ID" required minlength="3" maxlength="100" pattern="^[A-Za-z0-9 _-]+$" autocomplete="off" aria-required="true" aria-describedby="attributeName-hint attributeName-error">
+
+                                <small id="attributeName-hint">
+
+                                    Enter 3–100 characters using letters, numbers, spaces, hyphens or underscores.
+
+                                </small>
+
+                                <span id="attributeName-error" class="form-field__error" role="alert" aria-live="polite">
+
+                                </span>
+
+                            </div>
+
+                            <div class="form-field">
+
+                                <label for="businessUnit">
+
+                                    Business Unit
+
+                                </label>
+
+                                <select id="businessUnit" name="businessUnit" required aria-required="true" aria-describedby="businessUnit-hint businessUnit-error">
+
+                                    <option value="">
+
+                                        Select Business Unit
+
+                                    </option>
+
+                                    <option
+                                        value="1"
+                                        selected>
+
+                                        Human Resources
+
+                                    </option>
+
+                                </select>
+
+                                <small id="businessUnit-hint">
+
+                                    Choose the appropriate Business Unit.
+
+                                </small>
+
+                                <span id="businessUnit-error" class="form-field__error" role="alert" aria-live="polite">
+
+                                </span>
+
+                            </div>
+
+                            <div class="form-field">
+
+                                <label for="customerLocation">
+
+                                    Customer Location
+
+                                </label>
+
+                                <select id="customerLocation" name="customerLocation" required aria-required="true" aria-describedby="customerLocation-hint customerLocation-error">
+
+                                    <option value="">
+
+                                        Select Customer Location
+
+                                    </option>
+
+                                    <option
+                                        value="2"
+                                        selected>
+
+                                        New Delhi
+
+                                    </option>
+
+                                </select>
+
+                                <small id="customerLocation-hint">
+
+                                    Select the customer location.
+
+                                </small>
+
+                                <span id="customerLocation-error" class="form-field__error" role="alert" aria-live="polite">
+
+                                </span>
+
+                            </div>
+                            <div class="form-field">
+
+                                <label for="company">
+
+                                    Company
+
+                                </label>
+
+                                <select id="company" name="company" required aria-required="true" aria-describedby="company-hint company-error">
+
+                                    <option value="">
+
+                                        Select Company
+
+                                    </option>
+
+                                </select>
+
+                                <small id="company-hint">
+
+                                    Select the associated company.
+
+                                </small>
+
+                                <span id="company-error" class="form-field__error" role="alert" aria-live="polite">
+
+                                </span>
+
+                            </div>
+
+                            <fieldset class="form-field">
+
+                                <legend>
+
+                                    Status
+
+                                </legend>
+
+                                <div class="radio-group">
+
+                                    <label class="radio-option">
+
+                                        <input
+                                            type="radio"
+                                            id="active"
+                                            name="isActive"
+                                            value="true"
+                                            checked
+                                            aria-describedby="isActive-hint isActive-error">
+
+                                        <span>
+
+                                            Active
+
+                                        </span>
+
+                                    </label>
+
+                                    <label class="radio-option">
+
+                                        <input
+                                            type="radio"
+                                            id="inactive"
+                                            name="isActive"
+                                            value="false"
+                                            aria-describedby="isActive-hint isActive-error">
+
+                                        <span>
+
+                                            Inactive
+
+                                        </span>
+
+                                    </label>
+
+                                </div>
+
+                                <small id="isActive-hint">
+
+                                    Select the current status.
+
+                                </small>
+
+                                <span id="isActive-error" class="form-field__error" role="alert" aria-live="polite">
+
+                                </span>
+
+                            </fieldset>
+
+                            <div class="form-field">
+
+                                <label for="createdOn">
+
+                                    Created On
+
+                                </label>
+
+                                <input type="date" id="createdOn" name="createdOn" required max="2026-08-06" aria-required="true" aria-describedby="createdOn-hint createdOn-error">
+
+                                <small id="createdOn-hint">
+
+                                    Select today or an earlier date.
+
+                                </small>
+
+                                <span id="createdOn-error" class="form-field__error" role="alert" aria-live="polite">
+
+                                </span>
+
+                            </div>
+
+                            <div class="form-field">
+
+                                <label for="notes">
+
+                                    Notes
+
+                                </label>
+
+                                <textarea id="notes" name="notes" rows="6" maxlength="500" aria-describedby="notes-hint notes-counter notes-error"></textarea>
+
+                                <small id="notes-hint">
+
+                                    Optional. Maximum 500 characters.
+
+                                </small>
+
+                                <small id="notes-counter" class="character-counter" aria-live="polite">
+
+                                    0 / 500
+
+                                </small>
+
+                                <span id="notes-error" class="form-field__error" role="alert" aria-live="polite">
+
+                                </span>
+
+                            </div>
+
+                            <section class="audit-information" aria-labelledby="audit-title">
+
+                                <h3 id="audit-title">
+
+                                    Audit Information
+
+                                </h3>
+
+                                <div class="audit-grid">
+
+                                    <div>
+
+                                        <strong>
+
+                                            Created By
+
+                                        </strong>
+
+                                        <p id="createdByDisplay">
+
+                                            System Administrator
+
+                                        </p>
+
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+
+                                            Created On
+
+                                        </strong>
+
+                                        <p>
+
+                                            <time id="createdOnDisplay" datetime="2026-01-15">
+
+                                                15 Jan 2026
+
+                                            </time>
+
+                                        </p>
+
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+
+                                            Last Updated By
+
+                                        </strong>
+
+                                        <p id="updatedByDisplay">
+
+                                            Sudeep Dewangan
+
+                                        </p>
+
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+
+                                            Last Updated On
+
+                                        </strong>
+
+                                        <p>
+
+                                            <time id="updatedOnDisplay" datetime="2026-08-06">
+
+                                                06 Aug 2026
+
+                                            </time>
+
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </section>
+
+                            <div class="form-actions">
+
+                                <button type="submit" class="btn btn--primary">
+
+                                    Update Attribute
+
+                                </button>
+
+                                <button type="reset" class="btn btn--ghost">
+
+                                    Reset
+
+                                </button>
+
+                                <a href="index.html" class="btn btn--danger">
+
+                                    Cancel
+
+                                </a>
+
+                            </div>
+
+                        </fieldset>
+
+                    </form>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <div class="toast-container" aria-live="polite" aria-atomic="true">
+
+    </div>
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <p>
+
+                &copy; 2026 Attribute Management System. All rights reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script type="module" src="js/main.js">
+
+    </script>
+
+</body>
+
+</html>
