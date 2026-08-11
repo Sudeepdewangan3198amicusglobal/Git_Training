@@ -1,0 +1,8 @@
+[
+    { "id": 1, "businessUnitId": 1, "name": "Delhi" },
+    { "id": 2, "businessUnitId": 1, "name": "Mumbai" },
+    { "id": 3, "businessUnitId": 2, "name": "Bengaluru" },
+    { "id": 4, "businessUnitId": 3, "name": "Hyderabad" },
+    { "id": 5, "businessUnitId": 4, "name": "Pune" },
+    { "id": 6, "businessUnitId": 2, "name": "Chennai" }
+]

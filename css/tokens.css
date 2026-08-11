@@ -1,0 +1,185 @@
+/* ==========================================================================
+   TOKENS.CSS
+   ==========================================================================
+   Project : Attribute Management System
+   Purpose : Design Tokens (CSS Custom Properties)
+   Notes   :
+   - Single source of truth for design values
+   - Supports runtime theme switching
+   - Mobile-first
+   - Accessible color palette
+   ========================================================================== */
+
+
+/* ==========================================================================
+   DEFAULT THEME (LIGHT)
+   ========================================================================== */
+
+:root {
+    /* ==========================================================
+       COLORS
+       ========================================================== */
+    --color-bg: #f5f7fb;
+    --color-surface: #ffffff;
+    --color-text: #1f2937;
+    --color-muted: #6b7280;
+    --color-primary: #2563eb;
+    --color-primary-hover: #1d4ed8;
+    --color-success: #16a34a;
+    --color-success-bg: #dcfce7;
+    --color-danger: #dc2626;
+    --color-danger-bg: #fee2e2;
+    --color-warning: #f59e0b;
+    --color-warning-bg: #fef3c7;
+    --color-info: #0891b2;
+    --color-info-bg: #cffafe;
+    --color-border: #d1d5db;
+    --color-table-header: #eff6ff;
+    --color-table-hover: #f9fafb;
+    --color-table-stripe: #f8fafc;
+    --color-focus-ring: #2563eb;
+    --color-selection-bg: #2563eb;
+    --color-selection-text: #ffffff;
+    /* ==========================================================
+       SPACING SCALE
+       4px Base
+       ========================================================== */
+    --space-1: 0.25rem;
+    --space-2: 0.50rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.50rem;
+    --space-6: 2rem;
+    /* ==========================================================
+       TYPOGRAPHY
+       ========================================================== */
+    --font-base: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-mono: "Cascadia Code", "Fira Code", Consolas, monospace;
+    /* ==========================================================
+       FONT SIZES
+       ========================================================== */
+    --fs-xs: 0.75rem;
+    --fs-sm: 0.875rem;
+    --fs-base: 1rem;
+    --fs-lg: clamp( 1.05rem, 1rem + 0.30vw, 1.25rem);
+    --fs-xl: clamp( 1.30rem, 1.15rem + 0.60vw, 1.75rem);
+    --fs-2xl: clamp( 1.75rem, 1.40rem + 1vw, 2.40rem);
+    /* ==========================================================
+       FONT WEIGHTS
+       ========================================================== */
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+    /* ==========================================================
+       LINE HEIGHTS
+       ========================================================== */
+    --lh-tight: 1.2;
+    --lh-base: 1.5;
+    --lh-loose: 1.8;
+    /* ==========================================================
+       BORDER RADIUS
+       ========================================================== */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.50rem;
+    --radius-lg: 0.75rem;
+    --radius-pill: 999rem;
+    /* ==========================================================
+       SHADOWS
+       ========================================================== */
+    --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.05);
+    --shadow-2: 0 8px 20px rgba(0, 0, 0, 0.10), 0 2px 6px rgba(0, 0, 0, 0.08);
+    /* ==========================================================
+       TRANSITIONS
+       ========================================================== */
+    --transition-fast: 180ms ease;
+    --transition-normal: 280ms ease;
+    /* ==========================================================
+       WIDTHS
+       ========================================================== */
+    --container-max-width: 1400px;
+    --form-max-width: 900px;
+    /* ==========================================================
+       HEADER
+       ========================================================== */
+    --header-height: 4.5rem;
+    /* ==========================================================
+       Z-INDEX SCALE
+       ========================================================== */
+    --z-base: 1;
+    --z-dropdown: 100;
+    --z-sticky: 500;
+    --z-toast: 800;
+    --z-modal: 900;
+    --z-skip-link: 1000;
+}
+
+
+/* ==========================================================================
+   DARK THEME
+
+   Toggle in DevTools:
+   <html data-theme="dark">
+
+   JS will toggle this in theme.js
+   ========================================================================== */
+
+[data-theme="dark"] {
+    --color-bg: #0f172a;
+    --color-surface: #1e293b;
+    --color-text: #f8fafc;
+    --color-muted: #cbd5e1;
+    --color-primary: #60a5fa;
+    --color-primary-hover: #3b82f6;
+    --color-success: #4ade80;
+    --color-success-bg: #052e16;
+    --color-danger: #fb7185;
+    --color-danger-bg: #450a0a;
+    --color-warning: #facc15;
+    --color-warning-bg: #422006;
+    --color-info: #38bdf8;
+    --color-info-bg: #082f49;
+    --color-border: #475569;
+    --color-table-header: #1e293b;
+    --color-table-hover: #334155;
+    --color-table-stripe: #293548;
+    --color-focus-ring: #93c5fd;
+    --color-selection-bg: #60a5fa;
+    --color-selection-text: #000000;
+}
+
+
+/* ==========================================================================
+   FUTURE MEDIA QUERIES
+   ========================================================================== */
+
+@media (prefers-color-scheme: dark) {
+    /*
+        Theme.js will ultimately decide
+        whether to respect the OS preference
+        or the user's saved preference.
+    */
+}
+
+
+/* ==========================================================================
+   README NOTE
+
+   CSS Variables vs Sass Variables
+
+   CSS Variables
+   ✔ Runtime updates
+   ✔ Theme switching
+   ✔ JavaScript access
+   ✔ prefers-color-scheme support
+
+   Sass Variables
+   ✔ Compile-time constants
+   ✔ Complex calculations
+   ✔ Loops
+   ✔ Mixins
+   ✔ Functions
+
+   Runtime theming makes CSS Variables
+   the correct choice for this project.
+   ========================================================================== */

@@ -1,0 +1,915 @@
+/* ==========================================================
+   RESET
+========================================================== */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background: #f8f9fa;
+    color: #212529;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+
+/* ==========================================================
+   DESIGN TOKENS
+========================================================== */
+
+:root {
+    /* Colors */
+    --color-primary: #0d6efd;
+    --color-primary-hover: #0b5ed7;
+    --color-bg: #f8f9fa;
+    --color-surface: #ffffff;
+    --color-text: #212529;
+    --color-muted: #6c757d;
+    --color-border: #dee2e6;
+    --color-focus: #ff9800;
+    --shadow: 0 4px 10px rgba(0, 0, 0, .08);
+    --radius: 10px;
+    --transition: .25s ease;
+}
+
+
+/* ==========================================================
+   DARK MODE
+========================================================== */
+
+[data-theme="dark"] {
+    --color-bg: #121212;
+    --color-surface: #1f1f1f;
+    --color-text: #f8f9fa;
+    --color-border: #343a40;
+    --color-muted: #adb5bd;
+}
+
+
+/* ==========================================================
+   BODY
+========================================================== */
+
+body {
+    background: var(--color-bg);
+    color: var(--color-text);
+}
+
+
+/* ==========================================================
+   SKIP LINK
+========================================================== */
+
+.skip-link {
+    position: absolute;
+    left: 20px;
+    top: -60px;
+    background: var(--color-primary);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: top .3s;
+    z-index: 9999;
+}
+
+.skip-link:focus {
+    top: 20px;
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+header {
+    background: var(--color-surface);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 20px 40px;
+}
+
+
+/* ==========================================================
+   TITLE
+========================================================== */
+
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+
+/* ==========================================================
+   NAVIGATION
+========================================================== */
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: var(--transition);
+    font-weight: 600;
+}
+
+
+/* Hover */
+
+nav a:hover {
+    background: var(--color-primary);
+    color: white;
+}
+
+
+/* Keyboard */
+
+nav a:focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 4px;
+}
+
+
+/* Active Page */
+
+nav a[aria-current="page"] {
+    background: var(--color-primary);
+    color: white;
+}
+
+
+/* ==========================================================
+   HEADER LAYOUT
+========================================================== */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+#toastContainer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.toast {
+    background: #198754;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 6px;
+    animation: fade .3s ease;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width:768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header h1 {
+        margin-bottom: 10px;
+    }
+    nav {
+        width: 100%;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+    nav li {
+        width: 100%;
+    }
+    nav a {
+        display: block;
+        width: 100%;
+    }
+}
+
+
+/* ==========================================================
+   LARGE DESKTOP
+========================================================== */
+
+@media (min-width:1200px) {
+    header {
+        padding: 25px 80px;
+    }
+    header h1 {
+        font-size: 2.3rem;
+    }
+}
+
+
+/* ==========================================================
+   ACCESSIBILITY
+========================================================== */
+
+:focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 4px;
+}
+
+::selection {
+    background: var(--color-primary);
+    color: white;
+}
+
+
+/*  */
+
+html[data-theme="light"] {
+    background: #ffffff;
+    color: #000000;
+}
+
+html[data-theme="dark"] {
+    background: #1f1f1f;
+    color: #ffffff;
+}
+
+html[data-theme="dark"] table {
+    color: white;
+}
+
+html[data-theme="dark"] input,
+html[data-theme="dark"] select,
+html[data-theme="dark"] textarea {
+    background: #333;
+    color: white;
+}
+
+
+/*  */
+
+
+/*  */
+
+This css id for filter
+/* ==========================================================
+   FILTER SECTION
+========================================================== */
+
+section[aria-labelledby="filter-heading"] {
+    background: #ffffff;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .08);
+}
+
+
+/* ==========================================================
+   SECTION TITLE
+========================================================== */
+
+#filter-heading {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #0d6efd;
+    margin-bottom: 1.5rem;
+}
+
+
+/* ==========================================================
+   FORM LAYOUT
+========================================================== */
+
+form[role="search"] {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    align-items: end;
+}
+
+
+/* ==========================================================
+   FORM GROUP
+========================================================== */
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ==========================================================
+   LABELS
+========================================================== */
+
+label {
+    margin-bottom: .5rem;
+    font-size: .95rem;
+    font-weight: 600;
+    color: #343a40;
+}
+
+
+/* ==========================================================
+   INPUTS & SELECTS
+========================================================== */
+
+input,
+select {
+    width: 100%;
+    padding: .8rem 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 1rem;
+    transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+
+/* Placeholder */
+
+input::placeholder {
+    color: #6c757d;
+}
+
+
+/* Hover */
+
+input:hover,
+select:hover {
+    border-color: #0d6efd;
+}
+
+
+/* Focus */
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 4px rgba(13, 110, 253, .15);
+}
+
+
+/* ==========================================================
+   SEARCH BUTTON
+========================================================== */
+
+button[type="submit"] {
+    padding: .85rem 1.5rem;
+    background: #0d6efd;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .25s ease, transform .2s ease;
+}
+
+
+/* Hover */
+
+button[type="submit"]:hover {
+    background: #0b5ed7;
+}
+
+
+/* Click */
+
+button[type="submit"]:active {
+    transform: scale(.98);
+}
+
+
+/* Keyboard */
+
+button[type="submit"]:focus-visible {
+    outline: 3px solid #ff9800;
+    outline-offset: 3px;
+}
+
+
+/* ==========================================================
+   LIVE REGION
+========================================================== */
+
+#results-status {
+    margin-top: 1.5rem;
+    padding: .75rem 1rem;
+    border-radius: 8px;
+    background: #e9f5ff;
+    color: #0d6efd;
+    font-weight: 500;
+    min-height: 45px;
+}
+
+
+/* Hide when empty */
+
+#results-status:empty {
+    display: none;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width:768px) {
+    form[role="search"] {
+        grid-template-columns: 1fr;
+    }
+    button[type="submit"] {
+        width: 100%;
+    }
+}
+
+
+/* ==========================================================
+   LARGE SCREENS
+========================================================== */
+
+@media (min-width:1200px) {
+    form[role="search"] {
+        grid-template-columns: 2fr 1fr 1fr auto;
+        align-items: end;
+    }
+    button[type="submit"] {
+        white-space: nowrap;
+    }
+}
+
+
+/*  */
+
+
+/*  */
+
+
+/*  */
+
+
+/*  */
+
+
+/*  */
+
+
+/*  */
+
+
+/*  */
+
+
+/*this css is foe table  */
+
+
+/*  */
+
+
+/* ==========================================================
+   TABLE
+========================================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .08);
+    margin: 2rem 0;
+}
+
+
+/* Caption */
+
+caption {
+    caption-side: top;
+    text-align: left;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #0d6efd;
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+thead th {
+    background: #0d6efd;
+    color: #fff;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+
+/* ==========================================================
+   SORT ICONS
+========================================================== */
+
+th[aria-sort="ascending"]::after {
+    content: " ↑";
+}
+
+th[aria-sort="descending"]::after {
+    content: " ↓";
+}
+
+th[aria-sort="none"]::after {
+    content: " ↕";
+    opacity: .4;
+}
+
+
+/* ==========================================================
+   BODY
+========================================================== */
+
+tbody th,
+tbody td {
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: middle;
+}
+
+
+/* Zebra Rows */
+
+tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+
+/* Hover */
+
+tbody tr:hover {
+    background: #eef5ff;
+}
+
+
+/* Keyboard Focus */
+
+tbody tr:focus-within {
+    outline: 3px solid #ff9800;
+    outline-offset: -3px;
+}
+
+
+/* ==========================================================
+   STATUS BADGES
+========================================================== */
+
+span[role="status"] {
+    display: inline-block;
+    padding: .4rem .8rem;
+    border-radius: 999px;
+    font-size: .85rem;
+    font-weight: 600;
+}
+
+
+/* Active */
+
+span[role="status"] {
+    background: #d1f7dc;
+    color: #146c43;
+}
+
+
+/* Inactive */
+
+span[role="status"]:where(:contains("Inactive")) {
+    background: #f8d7da;
+    color: #842029;
+}
+
+
+/*
+CSS cannot detect text like "Inactive".
+For real projects use:
+<span class="badge badge--inactive">
+*/
+
+
+/* ==========================================================
+   ACTIONS
+========================================================== */
+
+td:last-child {
+    display: flex;
+    gap: .75rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+/* Edit Link */
+
+td a {
+    background: #0d6efd;
+    color: #fff;
+    padding: .5rem 1rem;
+    border-radius: 6px;
+    transition: .25s;
+    font-weight: 600;
+}
+
+td a:hover {
+    background: #0b5ed7;
+}
+
+
+/* Delete Button */
+
+td button {
+    background: #dc3545;
+    color: #fff;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .25s;
+}
+
+td button:hover {
+    background: #bb2d3b;
+}
+
+td button:focus-visible,
+td a:focus-visible {
+    outline: 3px solid orange;
+    outline-offset: 3px;
+}
+
+
+/* ==========================================================
+   MOBILE RESPONSIVE TABLE
+========================================================== */
+
+@media (max-width:768px) {
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+    thead {
+        display: none;
+    }
+    tbody tr {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, .08);
+    }
+    tbody th {
+        font-size: 1.1rem;
+        border: none;
+        padding-bottom: .75rem;
+    }
+    tbody td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: none;
+        border-bottom: 1px solid #eee;
+        padding: .75rem 0;
+    }
+    tbody td:last-child {
+        border-bottom: none;
+    }
+    tbody td::before {
+        content: attr(data-label);
+        font-weight: 700;
+        color: #495057;
+    }
+    td:last-child {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .75rem;
+    }
+    td a,
+    td button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/*  */
+
+
+/* 
+This css part is for result section */
+
+
+/*  */
+
+
+/*  */
+
+
+/* ==========================================================
+   QUICK STATS (ASIDE)
+========================================================== */
+
+aside[aria-labelledby="quick-stats-heading"] {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+}
+
+
+/* ==========================================================
+   HEADING
+========================================================== */
+
+#quick-stats-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0d6efd;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: .75rem;
+}
+
+
+/* ==========================================================
+   LIST
+========================================================== */
+
+aside ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* ==========================================================
+   LIST ITEMS
+========================================================== */
+
+aside li {
+    background: #f8f9fa;
+    border-left: 5px solid #0d6efd;
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #343a40;
+    transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease;
+}
+
+
+/* Hover Effect */
+
+aside li:hover {
+    background: #eef5ff;
+    transform: translateX(5px);
+    box-shadow: 0 4px 10px rgba(13, 110, 253, .15);
+}
+
+
+/* ==========================================================
+   DIFFERENT COLORS
+========================================================== */
+
+aside li:nth-child(1) {
+    border-left-color: #0d6efd;
+}
+
+aside li:nth-child(2) {
+    border-left-color: #198754;
+}
+
+aside li:nth-child(3) {
+    border-left-color: #dc3545;
+}
+
+
+/* ==========================================================
+   OPTIONAL ICONS
+========================================================== */
+
+aside li::before {
+    margin-right: .6rem;
+    font-size: 1.1rem;
+}
+
+aside li:nth-child(1)::before {
+    content: "📊";
+}
+
+aside li:nth-child(2)::before {
+    content: "✅";
+}
+
+aside li:nth-child(3)::before {
+    content: "❌";
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width:768px) {
+    aside {
+        padding: 1.5rem;
+    }
+    #quick-stats-heading {
+        font-size: 1.3rem;
+    }
+    aside li {
+        font-size: .95rem;
+        padding: .9rem 1rem;
+    }
+}
+
+
+/* ==========================================================
+   LARGE DESKTOP
+========================================================== */
+
+@media (min-width:1200px) {
+    aside {
+        max-width: 350px;
+    }
+}
