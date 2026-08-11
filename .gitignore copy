@@ -1,0 +1,64 @@
+# ============================================================
+
+# IDE / EDITOR FILES
+
+# ============================================================
+
+# Ignore files and folders created by IDEs and code editors.
+
+# These files contain local workspace or user-specific settings.
+
+.vs/
+.vscode/
+.idea/
+
+# ============================================================
+
+# BUILD OUTPUTS AND DEPENDENCIES
+
+# ============================================================
+
+# Ignore generated build files and installed dependencies.
+
+# These files can be recreated from the project source/configuration.
+
+bin/
+obj/
+node_modules/
+dist/
+
+# ============================================================
+
+# OPERATING SYSTEM FILES
+
+# ============================================================
+
+# Ignore files automatically created by operating systems.
+
+.DS_Store
+Thumbs.db
+
+# ============================================================
+
+# TEMPORARY / LOG FILES
+
+# ============================================================
+
+# Ignore temporary files and application logs.
+
+*.log
+*.tmp
+*.temp
+
+# ============================================================
+
+# ENVIRONMENT / LOCAL CONFIGURATION
+
+# ============================================================
+
+# Ignore local environment files that may contain machine-specific
+
+# or sensitive configuration.
+
+.env
+.env.local
