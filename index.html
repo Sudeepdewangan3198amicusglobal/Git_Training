@@ -87,121 +87,136 @@
 
     <div>
 
-        <h1 class="site-title">
+        <<<<<<< HEAD <div>
+            =======
+            <h1 class="site-title">
+                >>>>>>> main Attribute Management System
 
-            Attribute Management System
-
-        </h1>
+            </h1>
 
     </div>
 
 
+    <<<<<<< HEAD </div>
+
+        <!-- ==============================================
+=======
     <!-- ==============================================
+>>>>>>> main
                  PRIMARY NAVIGATION
             =============================================== -->
 
-    <nav class="primary-nav" aria-label="Primary Navigation">
+        <nav class="primary-nav" aria-label="Primary Navigation">
 
-        <ul class="nav-list">
+            <ul class="nav-list">
 
+                <<<<<<< HEAD <li>
+                    <a href="index.html" aria-current="page">
+=======
             <li>
 
                 <a href="index.html" aria-current="page">
+>>>>>>> main
 
                             Attributes
 
                         </a>
 
+                    <<<<<<< HEAD </li>
+                        <a href="add-attribute.html">
+=======
             </li>
 
             <li>
 
                 <a href="add-attribute.html">
+>>>>>>> main
 
                             Add Attribute
 
                         </a>
+                        <li>
 
-            </li>
 
-        </ul>
 
-    </nav>
+                        </li>
 
-    <!-- ==============================================
-                 THEME TOGGLE
-            =============================================== -->
+            </ul>
 
-    <button id="theme-toggle" class="btn btn--ghost btn--icon" type="button" aria-label="Toggle dark mode">
+        </nav>
+
+        <<<<<<< HEAD=======< !--==============================================T HEME TOGGLE===============================================- ->
+
+            <button id="theme-toggle" class="btn btn--ghost btn--icon" type="button" aria-label="Toggle dark mode">
     🌙
 </button>
-    </div>
+            </div>
 
-    </header>
+            </header>
 
-    <!-- ==========================================================
+            <!-- ==========================================================
          MAIN CONTENT
     =========================================================== -->
 
-    <main id="main-content" class="main-content">
+            <main id="main-content" class="main-content">
 
-        <div class="container">
+                <div class="container">
 
-            <!-- ==============================================
+                    <!-- ==============================================
                  PAGE INTRODUCTION
             =============================================== -->
 
-            <section class="page-introduction" aria-labelledby="page-title">
+                    <section class="page-introduction" aria-labelledby="page-title">
 
-                <h2 id="page-title" class="page-title">
+                        <h2 id="page-title" class="page-title">
 
-                    Attribute List
+                            Attribute List
 
-                </h2>
+                        </h2>
 
-                <p class="page-description">
+                        <p class="page-description">
 
-                    View, search, filter, sort and manage all business attributes stored inside the Attribute Management System.
+                            View, search, filter, sort and manage all business attributes stored inside the Attribute Management System.
 
-                </p>
+                        </p>
 
-            </section>
+                    </section>
 
-            <!-- ==============================================
+                    <!-- ==============================================
                  FILTER SECTION
             =============================================== -->
 
-            <section class="filter-section card" aria-labelledby="filter-title">
+                    <section class="filter-section card" aria-labelledby="filter-title">
 
-                <h2 id="filter-title">
+                        <h2 id="filter-title">
 
-                    Filter Attributes
+                            Filter Attributes
 
-                </h2>
+                        </h2>
 
-                <form id="filter-form" role="search" method="get" aria-label="Filter attributes" class="filter-bar">
+                        <form id="filter-form" role="search" method="get" aria-label="Filter attributes" class="filter-bar">
 
-                    <div class="form-field">
+                            <div class="form-field">
 
-                        <label for="search">
+                                <label for="search">
 
                             Search Attribute
 
                         </label>
 
-                        <input id="search" name="search" type="search" inputmode="search" autocomplete="off" placeholder="Search by attribute name">
+                                <input id="search" name="search" type="search" inputmode="search" autocomplete="off" placeholder="Search by attribute name">
 
-                    </div>
+                            </div>
 
-                    <div class="form-field">
+                            <div class="form-field">
 
-                        <label for="business-unit">
+                                <label for="business-unit">
 
                             Business Unit
 
                         </label>
 
-                        <select id="business-unit" name="businessUnit">
+                                <select id="business-unit" name="businessUnit">
 
                             <option value="">
 
@@ -235,17 +250,17 @@
 
                         </select>
 
-                    </div>
+                            </div>
 
-                    <div class="form-field">
+                            <div class="form-field">
 
-                        <label for="status">
+                                <label for="status">
 
                             Status
 
                         </label>
 
-                        <select id="status" name="status">
+                                <select id="status" name="status">
 
                             <option value="">
 
@@ -267,387 +282,391 @@
 
                         </select>
 
-                    </div>
+                            </div>
 
-                    <div class="form-field">
+                            <div class="form-field">
 
-                        <button type="submit" class="btn btn--primary">
+                                <button type="submit" class="btn btn--primary">
 
                             Apply Filters
 
                         </button>
 
-                    </div>
+                            </div>
 
-                </form>
+                        </form>
 
-                <div id="results-status" class="results-status" aria-live="polite">
+                        <div id="results-status" class="results-status" aria-live="polite">
 
-                    Showing 8 attributes.
+                            Showing 8 attributes.
 
-                </div>
+                        </div>
 
-            </section>
+                    </section>
 
-            <!-- ==============================================
+                    <!-- ==============================================
                  RESULTS SECTION
             =============================================== -->
 
-            <section class="results-section" aria-labelledby="results-title">
+                    <section class="results-section" aria-labelledby="results-title">
 
-                <div class="results-summary">
+                        <div class="results-summary">
 
-                    <h2 id="results-title">
+                            <h2 id="results-title">
 
-                        Attribute Results
+                                Attribute Results
 
-                    </h2>
+                            </h2>
 
-                    <a href="add-attribute.html" class="btn btn--primary">
+                            <a href="add-attribute.html" class="btn btn--primary">
 
                         Add New Attribute
 
                     </a>
 
-                </div>
+                        </div>
 
-                <div class="table-wrapper">
-                    <table class="table">
+                        <div class="table-wrapper">
+                            <table class="table">
 
-                        <caption>
+                                <caption>
 
-                            List of business attributes available in the system.
+                                    List of business attributes available in the system.
 
-                        </caption>
+                                </caption>
 
-                        <thead>
+                                <thead>
 
-                            <tr>
+                                    <tr>
 
-                                <th scope="col" aria-sort="none">
-                                    Attribute Name
-                                </th>
+                                        <th scope="col" aria-sort="none">
+                                            Attribute Name
+                                        </th>
 
-                                <th scope="col" aria-sort="none">
-                                    Business Unit
-                                </th>
+                                        <th scope="col" aria-sort="none">
+                                            Business Unit
+                                        </th>
 
-                                <th scope="col" aria-sort="none">
-                                    Location
-                                </th>
+                                        <th scope="col" aria-sort="none">
+                                            Location
+                                        </th>
 
-                                <th scope="col" aria-sort="none">
-                                    Company
-                                </th>
+                                        <th scope="col" aria-sort="none">
+                                            Company
+                                        </th>
 
-                                <th scope="col" aria-sort="none">
-                                    Status
-                                </th>
+                                        <th scope="col" aria-sort="none">
+                                            Status
+                                        </th>
 
-                                <th scope="col" aria-sort="none">
-                                    Created On
-                                </th>
+                                        <th scope="col" aria-sort="none">
+                                            Created On
+                                        </th>
 
-                                <th scope="col">
-                                    Actions
-                                </th>
+                                        <th scope="col">
+                                            Actions
+                                        </th>
 
-                            </tr>
+                                    </tr>
 
-                        </thead>
+                                </thead>
 
-                        <tbody id="attribute-table-body">
+                                <tbody id="attribute-table-body">
 
-                            <tr>
+                                    <tr>
 
-                                <th scope="row" id="attr-101">
-                                    Employee ID
-                                </th>
+                                        <th scope="row" id="attr-101">
+                                            Employee ID
+                                        </th>
 
-                                <td data-label="Business Unit">HR</td>
+                                        <td data-label="Business Unit">HR</td>
 
-                                <td data-label="Location">Delhi</td>
+                                        <td data-label="Location">Delhi</td>
 
-                                <td data-label="Company">ABC Ltd.</td>
+                                        <td data-label="Company">ABC Ltd.</td>
 
-                                <td data-label="Status">
+                                        <td data-label="Status">
 
-                                    <span class="badge badge--active">
+                                            <span class="badge badge--active">
                                         Active
                                     </span>
 
-                                </td>
+                                        </td>
 
-                                <td data-label="Created On">
-                                    12 Jan 2026
-                                </td>
+                                        <td data-label="Created On">
+                                            12 Jan 2026
+                                        </td>
 
-                                <td data-label="Actions">
+                                        <td data-label="Actions">
 
-                                    <div class="table-actions">
+                                            <div class="table-actions">
 
-                                        <a href="edit-attribute.html?id=101" class="btn btn--ghost btn--sm">
+                                                <a href="edit-attribute.html?id=101" class="btn btn--ghost btn--sm">
                                             Edit
                                         </a>
 
-                                        <form method="post">
+                                                <form method="post">
 
-                                            <button type="submit" class="btn btn--danger btn--sm">
+                                                    <button type="submit" class="btn btn--danger btn--sm">
 
                                                 Delete
 
                                             </button>
 
-                                        </form>
+                                                </form>
 
-                                    </div>
+                                            </div>
 
-                                </td>
+                                        </td>
 
-                            </tr>
+                                    </tr>
 
-                            <tr>
+                                    <tr>
 
-                                <th scope="row" id="attr-102">
-                                    Customer Code
-                                </th>
+                                        <th scope="row" id="attr-102">
+                                            Customer Code
+                                        </th>
 
-                                <td data-label="Business Unit">Sales</td>
+                                        <td data-label="Business Unit">Sales</td>
 
-                                <td data-label="Location">Mumbai</td>
+                                        <td data-label="Location">Mumbai</td>
 
-                                <td data-label="Company">XYZ Pvt Ltd.</td>
+                                        <td data-label="Company">XYZ Pvt Ltd.</td>
 
-                                <td data-label="Status">
-                                    <span class="badge badge--active">
+                                        <td data-label="Status">
+                                            <span class="badge badge--active">
                                         Active
                                     </span>
-                                </td>
+                                        </td>
 
-                                <td data-label="Created On">
-                                    18 Jan 2026
-                                </td>
+                                        <td data-label="Created On">
+                                            18 Jan 2026
+                                        </td>
 
-                                <td data-label="Actions">
+                                        <td data-label="Actions">
 
-                                    <div class="table-actions">
+                                            <div class="table-actions">
 
-                                        <a href="edit-attribute.html?id=102" class="btn btn--ghost btn--sm">
+                                                <a href="edit-attribute.html?id=102" class="btn btn--ghost btn--sm">
 
                                             Edit
 
                                         </a>
 
-                                        <form method="post">
+                                                <form method="post">
 
-                                            <button type="submit" class="btn btn--danger btn--sm">
+                                                    <button type="submit" class="btn btn--danger btn--sm">
 
                                                 Delete
 
                                             </button>
 
-                                        </form>
+                                                </form>
 
-                                    </div>
+                                            </div>
 
-                                </td>
+                                        </td>
 
-                            </tr>
+                                    </tr>
 
-                            <tr>
+                                    <tr>
 
-                                <th scope="row">
-                                    Supplier Type
-                                </th>
+                                        <th scope="row">
+                                            Supplier Type
+                                        </th>
 
-                                <td data-label="Business Unit">Procurement</td>
+                                        <td data-label="Business Unit">Procurement</td>
 
-                                <td data-label="Location">Pune</td>
+                                        <td data-label="Location">Pune</td>
 
-                                <td data-label="Company">Global Inc.</td>
+                                        <td data-label="Company">Global Inc.</td>
 
-                                <td data-label="Status">
+                                        <td data-label="Status">
 
-                                    <span class="badge badge--inactive">
+                                            <span class="badge badge--inactive">
 
                                         Inactive
 
                                     </span>
 
-                                </td>
+                                        </td>
 
-                                <td data-label="Created On">
-                                    02 Feb 2026
-                                </td>
+                                        <td data-label="Created On">
+                                            02 Feb 2026
+                                        </td>
 
-                                <td data-label="Actions">
+                                        <td data-label="Actions">
 
-                                    <div class="table-actions">
+                                            <div class="table-actions">
 
-                                        <a href="edit-attribute.html?id=103" class="btn btn--ghost btn--sm">
+                                                <a href="edit-attribute.html?id=103" class="btn btn--ghost btn--sm">
 
                                             Edit
 
                                         </a>
 
-                                        <form method="post">
+                                                <form method="post">
 
-                                            <button type="submit" class="btn btn--danger btn--sm">
+                                                    <button type="submit" class="btn btn--danger btn--sm">
 
                                                 Delete
 
                                             </button>
 
-                                        </form>
+                                                </form>
 
-                                    </div>
+                                            </div>
 
-                                </td>
+                                        </td>
 
-                            </tr>
+                                    </tr>
 
-                        </tbody>
+                                </tbody>
 
-                    </table>
+                            </table>
 
-                </div>
+                        </div>
 
-                <nav class="pagination" aria-label="Pagination">
+                        <nav class="pagination" aria-label="Pagination">
 
-                    <button class="btn btn--ghost" type="button" disabled>
+                            <button class="btn btn--ghost" type="button" disabled>
 
                         Previous
 
                     </button>
 
-                    <button class="btn pagination__item pagination__item--active">
+                            <button class="btn pagination__item pagination__item--active">
 
                         1
 
                     </button>
 
-                    <button class="btn pagination__item">
+                            <button class="btn pagination__item">
 
                         2
 
                     </button>
 
-                    <button class="btn pagination__item">
+                            <button class="btn pagination__item">
 
                         3
 
                     </button>
 
-                    <button class="btn btn--ghost" type="button">
+                            <button class="btn btn--ghost" type="button">
 
                         Next
 
                     </button>
 
-                </nav>
+                        </nav>
 
-            </section>
+                    </section>
 
-        </div>
+                </div>
 
-    </main>
+            </main>
 
-    <aside class="quick-stats card" aria-label="Quick Stats">
+            <aside class="quick-stats card" aria-label="Quick Stats">
 
-        <div class="container">
+                <div class="container">
 
-            <h2>
+                    <h2>
 
-                Quick Stats
+                        Quick Stats
 
-            </h2>
+                    </h2>
 
-            <ul class="quick-stats-list">
+                    <ul class="quick-stats-list">
 
-                <li>
-                    Total Attributes :
-                    <strong>18</strong>
-                </li>
+                        <li>
+                            Total Attributes :
+                            <strong>18</strong>
+                        </li>
 
-                <li>
-                    Active :
-                    <strong>14</strong>
-                </li>
+                        <li>
+                            Active :
+                            <strong>14</strong>
+                        </li>
 
-                <li>
-                    Inactive :
-                    <strong>4</strong>
-                </li>
+                        <li>
+                            Inactive :
+                            <strong>4</strong>
+                        </li>
 
-            </ul>
+                    </ul>
 
-        </div>
+                </div>
 
-    </aside>
+            </aside>
 
-    <div class="toast-container" aria-live="polite" aria-atomic="true">
-
-    </div>
-
-    <div id="delete-modal" class="modal" hidden>
-
-        <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="delete-title">
-
-            <div class="modal__header">
-
-                <h2 id="delete-title">
-
-                    Delete Attribute
-
-                </h2>
+            <div class="toast-container" aria-live="polite" aria-atomic="true">
 
             </div>
 
-            <div class="modal__body">
+            <div id="delete-modal" class="modal" hidden>
 
-                <p>
+                <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="delete-title">
 
-                    Are you sure you want to delete this attribute?
+                    <div class="modal__header">
 
-                </p>
+                        <h2 id="delete-title">
 
-            </div>
+                            Delete Attribute
 
-            <div class="modal__footer">
+                        </h2>
 
-                <button type="button" class="btn btn--ghost">
+                    </div>
+
+                    <div class="modal__body">
+
+                        <p>
+
+                            Are you sure you want to delete this attribute?
+
+                        </p>
+
+                    </div>
+
+                    <div class="modal__footer">
+
+                        <button type="button" class="btn btn--ghost">
 
                     Cancel
 
                 </button>
 
-                <button type="button" class="btn btn--danger">
+                        <button type="button" class="btn btn--danger">
 
                     Delete
 
                 </button>
 
+                    </div>
+
+                </div>
+
             </div>
 
-        </div>
+            <<<<<<< HEAD </div>
 
-    </div>
-    ---------------------------------------
-    <footer class="site-footer">
-        <div class="container">
+                </div>
+                ---------------------------------------
+                <footer class="site-footer">
+                    <div class="container">
 
-            <p>
+                        <p>
 
-                &copy; 2026 Attribute Management System. All Rights Reserved.
+                            &copy; 2026 Attribute Management System. All Rights Reserved.
 
-            </p>
+                        </p>
 
-        </div>
+                    </div>
 
 
-    </footer>
+                </footer>
 
-    --------------------------------------------------
+                -------------------------------------------------- ======= >>>>>>> main >>>>>>> feature
 
 </body>
 <script script script script type="module" src="js/theme.js">
